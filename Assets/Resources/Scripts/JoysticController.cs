@@ -1,18 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class JoysticController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private GameObject JoystickBackground;
+    [SerializeField] private GameObject Joystick;
+    private Vector2 joystickVector;
+    private Vector2 joystickTouchPos;
+    private Vector2 joystickBG;
+    private float joystickRadious;
+
+
+
     void Start()
     {
+
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }
