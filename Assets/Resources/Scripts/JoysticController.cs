@@ -17,13 +17,14 @@ public class JoysticController : MonoBehaviour
     void Start()
     {
         joystickOrigionalPos = JoystickBackground.transform.position;
-        joystickRadious = JoystickBackground.GetComponent<RectTransform>().sizeDelta.y / 2;
+        joystickRadious = JoystickBackground.GetComponent<RectTransform>().sizeDelta.y ;
     }
 
     public void TouchDown()
     {
         joystickTouchPos = Input.mousePosition;
-        Joystick.transform.position = Input.mousePosition;
+       // Joystick.transform.position = Input.mousePosition;
+       // JoystickBackground.transform.position = Input.mousePosition;
     }
 
     public void Drag(BaseEventData baseEventData)
@@ -41,7 +42,7 @@ public class JoysticController : MonoBehaviour
 
         else
         {
-            Joystick.transform.position = joystickOrigionalPos + JoystickVector * joystickRadious;
+            Joystick.transform.position = joystickTouchPos + JoystickVector * joystickRadious;
         }
 
 
@@ -51,6 +52,7 @@ public class JoysticController : MonoBehaviour
     {
         JoystickVector = Vector2.zero;
         Joystick.transform.position = joystickOrigionalPos;
+       // JoystickBackground.transform.position = joystickOrigionalPos;
     }
 
 
