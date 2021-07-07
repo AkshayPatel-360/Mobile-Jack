@@ -986,7 +986,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1147228513}
   - component: {fileID: 1147228512}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: bg1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1033,7 +1033,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: dc30534a65b950444a03735fa247b457, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1092,7 +1092,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  fireRate: 0.4
+  fireRate: 0.2
   bulletSpeed: 12
   moveJoystick: {fileID: 1851578640}
   fireJoystick: {fileID: 1160595115}

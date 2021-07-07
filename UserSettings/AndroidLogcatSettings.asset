@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "12843dae",
         "name": "com.DefaultCompany.com.unity.template.mobile2D",
-        "processId": 8563,
+        "processId": 4981,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -11,37 +11,43 @@
         {
             "deviceId": "12843dae",
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 4673,
-            "exited": false
-        },
-        {
-            "deviceId": "12843dae",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 4675,
-            "exited": false
-        },
-        {
-            "deviceId": "12843dae",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
-            "processId": 30696,
-            "exited": false
-        },
-        {
-            "deviceId": "12843dae",
-            "name": "com.DefaultCompany.com.unity.template.mobile2D",
             "processId": 8562,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "12843dae",
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
             "processId": 8565,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "12843dae",
             "name": "com.DefaultCompany.com.unity.template.mobile2D",
             "processId": 8563,
+            "exited": true
+        },
+        {
+            "deviceId": "12843dae",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 4972,
+            "exited": true
+        },
+        {
+            "deviceId": "12843dae",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 4984,
+            "exited": true
+        },
+        {
+            "deviceId": "12843dae",
+            "name": "net.oneplus.launcher",
+            "processId": 15710,
+            "exited": false
+        },
+        {
+            "deviceId": "12843dae",
+            "name": "com.DefaultCompany.com.unity.template.mobile2D",
+            "processId": 4981,
             "exited": false
         }
     ],
