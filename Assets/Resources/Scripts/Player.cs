@@ -9,10 +9,13 @@ public class Player : MonoBehaviour {
     [SerializeField] private float bulletSpeed;
     [SerializeField] private Joystick moveJoystick;
     [SerializeField] private Joystick fireJoystick;
+    [SerializeField] private Animator animator;
     [SerializeField] private GameObject bullet;
     [SerializeField] private Transform firePos;
     [SerializeField] private Rigidbody2D bulletRB;
+
     private Rigidbody2D rb;
+
     
     private void Start()
     {
@@ -24,6 +27,9 @@ public class Player : MonoBehaviour {
 
     private void Update()
     {
+        animator.SetFloat("Y",moveJoystick.Vertical());
+        animator.SetFloat("X", moveJoystick.Horizontal());
+
         TimeManager.Instance.Refresh();
         float x1 = moveJoystick.Horizontal();
         float y1 = moveJoystick.Vertical();
@@ -39,27 +45,11 @@ public class Player : MonoBehaviour {
 
     public void Shoot()
     {
-
-        /*float x = fireJoystick.Horizontal();
-        float y = fireJoystick.Vertical();
-
-        GameObject newBullet = Instantiate(bullet, firePos.position, Quaternion.identity);*/
-
-       
             float x = fireJoystick.Horizontal();
             float y = fireJoystick.Vertical();
 
             GameObject newBullet = Instantiate(bullet, firePos.position, Quaternion.identity);
             newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(x, y).normalized * bulletSpeed;
-            //bulletRB.velocity = new Vector2(x, y) * bulletSpeed;
-        
-
-
-
-        //bulletRB.velocity = new Vector2(x, y) * bulletSpeed;
 
     }
-
-
-
 }
