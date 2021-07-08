@@ -41,7 +41,10 @@ public class Bullet : MonoBehaviour
             if (enemy.Helth <= 0)
             {
                 enemy.Helth = 0;
+                enemy.Die();
             }
+
+            gameObject.SetActive(false);
 
 
         }

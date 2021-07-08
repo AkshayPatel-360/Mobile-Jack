@@ -5,25 +5,23 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField]private GameObject player;
-    [SerializeField] private float moveSpeed;
+   
+    [SerializeField] public float moveSpeed { get; }
     [SerializeField] public float Helth { get; set; } = 100;
     void Start()
     {
         
     }
+    
 
     // Update is called once per frame
     void Update()
     {
 
-        if (player != null)
-        {
-            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, moveSpeed * Time.deltaTime);
-        }
+       // EnemyManager.Instance.Follow(this.gameObject);
 
         Die();
-
+        Follow();
 
 
     }
@@ -33,6 +31,14 @@ public class Enemy : MonoBehaviour
         if (Helth<= 0)
         {
             Destroy(gameObject);
+        }
+    }
+
+    public void Follow()
+    {
+        if (PlayerManager.Instance.Player != null)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, PlayerManager.Instance.Player.transform.position, moveSpeed * Time.deltaTime);
         }
     }
 

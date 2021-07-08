@@ -20,17 +20,23 @@ public class PlayerManager
     }
     #endregion
 
+   
+    public GameObject Player { get; set; }
+
 
     public void Initialize()
     {
-
+       
     }
     public void Start()
     {
+        Player = GameObject.FindGameObjectWithTag("Player");
+
+        Debug.Log("jmcv");
 
     }
 
-   
+
 
     public void Refresh()
     {
