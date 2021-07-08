@@ -20,4 +20,25 @@ public class PlayerManager
     }
     #endregion
 
+
+    public void Initialize()
+    {
+
+    }
+    public void Start()
+    {
+
+    }
+
+   
+
+    public void Refresh()
+    {
+
+    }
+
+    public void FixedRefresh()
+    {
+
+    }
 }

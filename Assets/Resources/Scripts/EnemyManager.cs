@@ -19,4 +19,23 @@ public class EnemyManager
         }
     }
     #endregion
+
+    public void Initialize()
+    {
+
+    }
+    public void Start()
+    {
+
+    }
+
+    public void Refresh()
+    {
+
+    }
+
+    public void FixedRefresh()
+    {
+
+    }
 }
