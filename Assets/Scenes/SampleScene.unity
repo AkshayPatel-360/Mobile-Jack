@@ -1093,7 +1093,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  fireRate: 0.2
+  fireRate: 0.15
   bulletSpeed: 12
   moveJoystick: {fileID: 1851578640}
   fireJoystick: {fileID: 1160595115}
