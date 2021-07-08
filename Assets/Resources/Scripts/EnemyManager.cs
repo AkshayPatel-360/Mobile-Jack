@@ -2,17 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyManager : MonoBehaviour
+public class EnemyManager 
 {
-    // Start is called before the first frame update
-    void Start()
+    #region Singleton
+    private EnemyManager() { }
+    private static EnemyManager _instance;
+    public static EnemyManager Instance
     {
-        
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = new EnemyManager();
+            }
+            return _instance;
+        }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    #endregion
 }

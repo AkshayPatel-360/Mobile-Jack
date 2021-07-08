@@ -2,17 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerManager : MonoBehaviour
+public class PlayerManager 
 {
-    // Start is called before the first frame update
-    void Start()
+    #region Singleton
+    private PlayerManager() { }
+    private static PlayerManager _instance;
+    public static PlayerManager Instance
     {
-        
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = new PlayerManager();
+            }
+            return _instance;
+        }
     }
+    #endregion
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
