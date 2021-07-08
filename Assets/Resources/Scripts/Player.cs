@@ -48,8 +48,10 @@ public class Player : MonoBehaviour {
             float x = fireJoystick.Horizontal();
             float y = fireJoystick.Vertical();
 
-            GameObject newBullet = Instantiate(bullet, firePos.position, Quaternion.identity);
-            newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(x, y).normalized * bulletSpeed;
+        GameObject newBullet = ObjectPuller.currentObjectPuller.DepullObject();
+        newBullet.transform.position = firePos.position;
+
+        newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(x, y).normalized * bulletSpeed;
 
     }
 }
