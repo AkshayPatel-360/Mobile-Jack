@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     private Rigidbody2D rb;
     [SerializeField] private float bulletSpeed;
+    [SerializeField] private float damage;
     void Start()
     {
         
@@ -29,4 +30,22 @@ public class Bullet : MonoBehaviour
         gameObject.SetActive(false);
 
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Enemy"))
+        {
+            Enemy enemy = collision.GetComponent<Enemy>();
+            enemy.Helth -= damage;
+
+            if (enemy.Helth <= 0)
+            {
+                enemy.Helth = 0;
+            }
+
+
+        }
+    }
+
+
 }

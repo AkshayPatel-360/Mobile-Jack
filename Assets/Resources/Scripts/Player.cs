@@ -50,7 +50,7 @@ public class Player : MonoBehaviour {
 
         GameObject newBullet = ObjectPuller.currentObjectPuller.DepullObject();
         newBullet.transform.position = firePos.position;
-
+        
         newBullet.GetComponent<Rigidbody2D>().velocity = new Vector2(x, y).normalized * bulletSpeed;
 
     }

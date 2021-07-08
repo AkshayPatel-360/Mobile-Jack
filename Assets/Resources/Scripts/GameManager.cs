@@ -7,16 +7,13 @@ public class GameManager : MonoBehaviour
 
     public void Initialize()
     {
-        
         PlayerManager.Instance.Initialize();
         EnemyManager.Instance.Initialize();
-        
     }
     public void Start()
     {
         PlayerManager.Instance.Start();
         EnemyManager.Instance.Start();
-        
     }
     public void Refresh()
     {
