@@ -25,16 +25,14 @@ public class EnemyManager
     private float timeTillNextSpawn;
     [SerializeField] private Vector3 spawnPosition;
     
-    private GameObject enemies;
+    private GameObject[] enemies;
     
 
     public void Initialize()
     {
         
         timeTillNextSpawn = 1;
-        enemies = Resources.Load<GameObject>("Prefabs/Enemies/alian");
-
-        
+        enemies = Resources.LoadAll<GameObject>("Prefabs/Enemies");
     }
 
     public void Start()
@@ -74,7 +72,7 @@ public class EnemyManager
         spawnPosition.x = Random.Range(-17, 17);
         spawnPosition.y = Random.Range(-17, 17);
         spawnPosition.z = PlayerManager.Instance.Player.transform.position.z;
-        GameObject.Instantiate(enemies, spawnPosition, Quaternion.identity);
+        GameObject.Instantiate(enemies[UnityEngine.Random.Range(0, enemies.Length )], spawnPosition, Quaternion.identity);
 
     }
 }

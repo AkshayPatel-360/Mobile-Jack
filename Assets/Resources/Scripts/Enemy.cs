@@ -5,9 +5,9 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     // Start is called before the first frame update
-   
-    [SerializeField] public float moveSpeed { get; }
-    [SerializeField] public float Helth { get; set; } = 100;
+
+    public float moveSpeed;
+     public float Helth = 100;
     void Start()
     {
         

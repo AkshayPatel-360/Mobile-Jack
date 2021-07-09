@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     public Transform myTransform;
 
 
-    public void Initialize()
+    public void Awake()
     {
         PlayerManager.Instance.Initialize();
         EnemyManager.Instance.Initialize(); 

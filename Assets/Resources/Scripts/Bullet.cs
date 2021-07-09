@@ -37,6 +37,7 @@ public class Bullet : MonoBehaviour
         {
             Enemy enemy = collision.GetComponent<Enemy>();
             enemy.Helth -= damage;
+            gameObject.SetActive(false);
 
             if (enemy.Helth <= 0)
             {
@@ -44,7 +45,7 @@ public class Bullet : MonoBehaviour
                 enemy.Die();
             }
 
-            gameObject.SetActive(false);
+            
 
 
         }
