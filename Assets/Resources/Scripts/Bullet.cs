@@ -19,6 +19,7 @@ public class Bullet : MonoBehaviour
        
     }
 
+
     private void OnEnable()
     {
         Invoke("DisableObj", 2f);
@@ -28,6 +29,7 @@ public class Bullet : MonoBehaviour
     private void DisableObj()
     {
         gameObject.SetActive(false);
+       
 
     }
 
@@ -38,6 +40,7 @@ public class Bullet : MonoBehaviour
             Enemy enemy = collision.GetComponent<Enemy>();
             enemy.Helth -= damage;
             gameObject.SetActive(false);
+            CancelInvoke();
 
             if (enemy.Helth <= 0)
             {
