@@ -11,7 +11,7 @@ public class DamageText : MonoBehaviour
     }
     private void Start()
     {
-        Invoke("DisableObj", 0.8f);
+        Invoke("DisableObj", 1f);
     }
 
     private void Update()
