@@ -8,6 +8,7 @@ public class Bullet : MonoBehaviour
     private Rigidbody2D rb;
     [SerializeField] private float bulletSpeed;
     [SerializeField] private float damage;
+    [SerializeField] private GameObject damageText;
     void Start()
     {
         
@@ -39,6 +40,14 @@ public class Bullet : MonoBehaviour
         {
             Enemy enemy = collision.GetComponent<Enemy>();
             enemy.Helth -= damage;
+
+            GameObject newTextObject = DmgTextObjectPuller.currentDmgTextObjectPuller.DepullDmgTextObject();
+
+            newTextObject.transform.position = new Vector2(enemy.transform.position.x, enemy.transform.position.y + 2f);
+
+
+
+
             gameObject.SetActive(false);
             CancelInvoke();
 
@@ -53,6 +62,8 @@ public class Bullet : MonoBehaviour
 
         }
     }
+
+   
 
 
 }
