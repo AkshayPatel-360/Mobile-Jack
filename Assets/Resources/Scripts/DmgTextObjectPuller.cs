@@ -6,14 +6,12 @@ public class DmgTextObjectPuller : MonoBehaviour
 {
     public static DmgTextObjectPuller currentDmgTextObjectPuller;
     public GameObject PulledDmgTextObject;
+
     [SerializeField] private int pullAmount;
     private bool willGrow = true;
 
     private List<GameObject> pulledDmgTextObjects;
 
-
-
-    // Start is called before the first frame update
     void Start()
     {
         currentDmgTextObjectPuller = this;
@@ -34,7 +32,9 @@ public class DmgTextObjectPuller : MonoBehaviour
             if (!pulledDmgTextObjects[i].activeInHierarchy)
             {
                 pulledDmgTextObjects[i].SetActive(true);
+                
                 return pulledDmgTextObjects[i];
+
 
             }
         }

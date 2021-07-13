@@ -21,9 +21,9 @@ public class EnemyManager
     #endregion
 
 
-    [SerializeField] private float spawnTime = 2;
+    private float spawnTime = 4;
     private float timeTillNextSpawn;
-    [SerializeField] private Vector3 spawnPosition;
+    private Vector3 spawnPosition;
     
     private GameObject[] enemies;
     
@@ -55,16 +55,6 @@ public class EnemyManager
     {
 
     }
-
- /*   public void Follow(GameObject enemy)
-    {
-        if (PlayerManager.Instance.Player != null)
-        {
-            enemy.transform.position = Vector2.MoveTowards(enemy.transform.position, PlayerManager.Instance.Player.transform.position, enemies[0] * Time.deltaTime);
-        }
-    }
-*/
-
 
     void Spawn()
     {

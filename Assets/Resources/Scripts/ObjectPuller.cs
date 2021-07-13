@@ -35,6 +35,7 @@ public class ObjectPuller : MonoBehaviour
             if (!pulledObjects[i].activeInHierarchy)
             {
                 pulledObjects[i].SetActive(true);
+                pulledObjects[i].transform.position = Vector2.zero;
                 return pulledObjects[i];
 
             }

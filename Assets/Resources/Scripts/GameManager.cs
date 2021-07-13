@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
 
 
-    [SerializeField] private float spawnTime = 2;
+   /* [SerializeField] private float spawnTime = 2;
     [SerializeField] public float spawnDelay;       // The amount of time before spawning starts.
     [SerializeField] private Transform spawnPosition;
 
@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
 
     public int maxDistance;
     public Transform target;
-    public Transform myTransform;
+    public Transform myTransform;*/
 
 
     public void Awake()
@@ -35,19 +35,13 @@ public class GameManager : MonoBehaviour
         PlayerManager.Instance.Refresh();
         EnemyManager.Instance.Refresh();
 
-        InvokeRepeating("Spawn", spawnTime, spawnTime);
+        //InvokeRepeating("Spawn", spawnTime, spawnTime);
     }
     public void FixedUpdate()
     {
         PlayerManager.Instance.FixedRefresh();
         EnemyManager.Instance.FixedRefresh();
     }
-    void Spawn()
-    {
-
-    }
-
-
 }
     
 

@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
 
     public float moveSpeed;
-     public float Helth = 100;
+    public float Helth = 100;
     void Start()
     {
         
@@ -17,13 +17,8 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-       // EnemyManager.Instance.Follow(this.gameObject);
-
         Die();
         Follow();
-
-
     }
 
     public void Die()

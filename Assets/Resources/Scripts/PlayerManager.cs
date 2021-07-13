@@ -32,8 +32,6 @@ public class PlayerManager
     {
         Player = GameObject.FindGameObjectWithTag("Player");
 
-        Debug.Log("jmcv");
-
     }
 
 

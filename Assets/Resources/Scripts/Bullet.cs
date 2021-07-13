@@ -46,10 +46,12 @@ public class Bullet : MonoBehaviour
             newTextObject.transform.position = new Vector2(enemy.transform.position.x, enemy.transform.position.y + 2f);
 
 
-
-
-            gameObject.SetActive(false);
-            CancelInvoke();
+            if (enemy.Helth >0)
+            {
+                newTextObject.GetComponent<TextMesh>().text = enemy.Helth.ToString();
+            }
+           
+            TimeManager.Instance.AddDelegate(() => newTextObject.SetActive(false), 0.7f, 1);
 
             if (enemy.Helth <= 0)
             {
@@ -57,13 +59,7 @@ public class Bullet : MonoBehaviour
                 enemy.Die();
             }
 
-            
-
-
         }
     }
-
-   
-
 
 }
