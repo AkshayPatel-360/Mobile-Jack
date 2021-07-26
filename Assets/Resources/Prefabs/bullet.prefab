@@ -136,5 +136,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 50
-  damage: 10
-  damageText: {fileID: 0}
+  damage: 20

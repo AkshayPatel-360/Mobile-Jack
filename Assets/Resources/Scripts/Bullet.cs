@@ -4,22 +4,9 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    // Start is called before the first frame update
-    private Rigidbody2D rb;
     [SerializeField] private float bulletSpeed;
     [SerializeField] private float damage;
-    [SerializeField] private GameObject damageText;
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
-
+ 
 
     private void OnEnable()
     {
